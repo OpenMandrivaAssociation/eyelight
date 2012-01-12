@@ -59,7 +59,7 @@ Headers and libraries from %{name}
 NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--disable-static
-%make
+%make LIBS='-leet'
 
 %install
 rm -rf %{buildroot}
