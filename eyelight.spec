@@ -29,7 +29,7 @@ Group:		Graphical desktop/Enlightenment
 BuildRequires:	edje
 BuildRequires:	embryo
 BuildRequires:	evas
-BuildRequires:	pkgconfig(png)
+BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(emotion)
 BuildRequires:	pkgconfig(edje)
 
