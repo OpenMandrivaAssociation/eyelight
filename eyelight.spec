@@ -11,7 +11,7 @@
 #cd ..; \
 #tar -Jcf eyelight-$PKG_VERSION.tar.xz eyelight/ --exclude .svn --exclude .*ignore
 
-%define svnrev	62296
+%define svnrev	68638
 
 %define major   0
 %define libname %mklibname %{name} %{major}
@@ -23,7 +23,7 @@ Version:	0.5.0
 Release:	0.%{svnrev}.1
 License:	GPLv2.1
 URL:		http://enlightenment.org/
-Source: 	%{name}-%{version}.%{svnrev}.tar.xz
+Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
 Group:		Graphical desktop/Enlightenment
 
 BuildRequires:	edje
