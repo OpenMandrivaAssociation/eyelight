@@ -20,12 +20,13 @@
 Summary:	Eyelight is a simple EFL based presentation tool
 Name:		eyelight
 Version:	0.5.0
-Release:	0.%{svnrev}.1
+Release:	0.%{svnrev}.2
 License:	GPLv2.1
 URL:		http://enlightenment.org/
 Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
 Group:		Graphical desktop/Enlightenment
 
+BuildRequires:	doxygen
 BuildRequires:	edje
 BuildRequires:	embryo
 BuildRequires:	evas
@@ -62,7 +63,6 @@ NOCONFIGURE=yes ./autogen.sh
 %make LIBS='-leet'
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 find %{buildroot} -name *.la | xargs rm
 
@@ -80,4 +80,17 @@ find %{buildroot} -name *.la | xargs rm
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
+
+
+
+%changelog
+* Wed Jul 04 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.5.0-0.68638.1
++ Revision: 808110
+- version update 0.5.0.68638
+
+* Thu Jan 12 2012 Matthew Dawkins <mattydaw@mandriva.org> 0.5.0-0.62296.1
++ Revision: 760245
+- fixed build
+- fixed BR
+- imported package eyelight
 
