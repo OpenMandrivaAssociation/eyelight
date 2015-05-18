@@ -20,19 +20,24 @@
 Summary:	Eyelight is a simple EFL based presentation tool
 Name:		eyelight
 Version:	0.5.0
-Release:	0.%{svnrev}.2
+Release:	0.%{svnrev}.3
 License:	GPLv2.1
 URL:		http://enlightenment.org/
 Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
+Source100:	eyelight.rpmlintrc
+Patch0:		add-libeet.patch
+Patch1:		fix-include-paths.patch
 Group:		Graphical desktop/Enlightenment
 
 BuildRequires:	doxygen
-BuildRequires:	edje
-BuildRequires:	embryo
-BuildRequires:	evas
+BuildRequires:	pkgconfig(edje)
+BuildRequires:	pkgconfig(embryo)
+BuildRequires:	pkgconfig(evas)
+BuildRequires:	pkgconfig(ecore)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(emotion)
 BuildRequires:	pkgconfig(edje)
+BuildRequires:	pkgconfig(eet)
 
 %description
 Eyelight is a simple EFL based presentation tool
@@ -55,12 +60,13 @@ Headers and libraries from %{name}
 
 %prep
 %setup -qn %{name}
+%apply_patches
 
 %build
 NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--disable-static
-%make LIBS='-leet'
+%make
 
 %install
 %makeinstall_std
