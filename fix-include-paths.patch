@@ -1,0 +1,22 @@
+--- eyelight/src/bin/eyelight.c	2012-07-04 18:41:45.000000000 +0100
++++ eyelight/src/bin/eyelight.c~	2015-05-18 23:14:50.045281264 +0100
+@@ -6,12 +6,13 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#include <Evas.h>
+-#include <Ecore.h>
+-#include <Ecore_X.h>
+-#include <Ecore_Evas.h>
+-#include <Ecore_File.h>
+-#include <Edje.h>
++#include <evas-1/Evas.h>
++#include <ecore-1/Ecore.h>
++#include <ecore-x-1/Ecore_X.h>
++#include <ecore-evas-1/Ecore_Evas.h>
++#include <ecore-file-1/Ecore_File.h>
++#include <edje-1/Edje.h>
++#include <ecore-1/Ecore_Getopt.h>
+ 
+ #include <Eyelight_Smart.h>
+ #include <eyelight_viewer.h>

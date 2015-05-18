@@ -1,0 +1,11 @@
+--- eyelight/configure.ac~	2015-05-18 22:13:43.000000000 +0100
++++ eyelight/configure.ac	2015-05-18 22:43:49.247089332 +0100
+@@ -51,7 +51,7 @@
+ 
+ ### Checks for libraries
+ 
+-requirements="emotion edje ecore-file ecore-evas ecore evas eina"
++requirements="emotion edje ecore-file ecore-evas ecore evas eina eet"
+ 
+ requirements_bin="edje ecore-file ecore-evas ecore-x ecore evas eina"
+ 
