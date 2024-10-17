@@ -22,7 +22,7 @@ Name:		eyelight
 Version:	0.5.0
 Release:	0.%{svnrev}.3
 License:	GPLv2.1
-URL:		http://enlightenment.org/
+URL:		https://enlightenment.org/
 Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
 Source100:	eyelight.rpmlintrc
 Patch0:		add-libeet.patch
